@@ -36,6 +36,16 @@
   color: #0071bd !important;
 }
 
+.chart-container {
+  min-height: 600px;
+  overflow: scroll;
+}
+
+.chart-main {
+  min-height: 600px;
+  min-width: 600px;
+}
+
 .price-container {
   display: flex !important;
   gap: 20px !important;

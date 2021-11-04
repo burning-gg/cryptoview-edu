@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react';
 import { Line } from 'react-chartjs-2';
 
-const LineChart = ({ coinHistory, isZero }) => {
+const LineChart = ({ coinHistory, isZero, timePeriod }) => {
   const coinPrice = [];
   const coinTimestamp = [];
 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
     coinPrice.push(coinHistory.data.history[i].price);
     coinTimestamp.push(
-      new Date(coinHistory.data.history[i].timestamp).toLocaleDateString()
+      timePeriod === '24h'
+        ? new Date(coinHistory.data.history[i].timestamp).toLocaleTimeString()
+        : new Date(coinHistory.data.history[i].timestamp).toLocaleDateString()
     );
   }
 
@@ -20,7 +22,7 @@ const LineChart = ({ coinHistory, isZero }) => {
         data: coinPrice,
         fill: false,
         backgroundColor: '#0071bd',
-        borderColor: '0071bd',
+        borderColor: '#0071bd',
       },
     ],
   };
@@ -31,11 +33,16 @@ const LineChart = ({ coinHistory, isZero }) => {
         beginAtZero: isZero,
       },
     },
+    maintainAspectRatio: false,
   };
 
   return (
     <Fragment>
-      <Line data={data} options={options} />
+      <div className='chart-container'>
+        <div className='chart-main'>
+          <Line data={data} options={options} />
+        </div>
+      </div>
     </Fragment>
   );
 };

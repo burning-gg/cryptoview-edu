@@ -144,7 +144,11 @@ const CryptoDetails = () => {
           Begin at zero
         </Button>
       </Row>
-      <LineChart coinHistory={coinHistory} isZero={isZero} />
+      <LineChart
+        coinHistory={coinHistory}
+        isZero={isZero}
+        timePeriod={timePeriod}
+      />
 
       <Col className='stats-container'>
         <Col className='coin-value-statistics'>
