@@ -1,3 +1,13 @@
+# CryptoViewer
+
+CryptoViewer with React, Redux Toolkit, Rapid API
+
+## Rapid API Source
+
+[Coinranking](https://rapidapi.com/Coinranking/api/coinranking1) - Data about all cryptocurrencies and exchanges.
+
+[Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/) - An AI service from Microsoft Azure that turns any app into a news search resource.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

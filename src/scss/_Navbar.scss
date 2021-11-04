@@ -1,0 +1,50 @@
+.nav-container {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-secondary);
+}
+
+.logo-container {
+  background-color: var(--color-secondary);
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin: 10px 0 0 15px;
+}
+
+.logo a {
+  color: white;
+}
+
+.menu-control-container {
+  display: none !important;
+  margin-left: auto;
+  height: 40px !important;
+  width: 50px;
+  font-size: 1.2rem !important;
+  background-color: var(--bgSecondary) !important;
+  border: none !important;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-container {
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--bgSecondary);
+  }
+
+  .menu-control-container {
+    display: block !important;
+  }
+
+  .ant-menu {
+    position: absolute;
+    right: 0px;
+  }
+}

@@ -1,0 +1,57 @@
+.app {
+  display: flex;
+  overflow: hidden;
+}
+
+.navbar {
+  flex: 0.2;
+  min-width: 260px;
+  background-color: var(--color-secondary);
+}
+
+.main {
+  flex: 0.8;
+  width: 100%;
+}
+
+.routes {
+  padding: 20px 40px;
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.footer-title {
+  color: var(--text-secondary) !important;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+
+  .main {
+    flex: 1;
+    margin-top: 100px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    margin-top: 20px;
+  }
+}
