@@ -2,6 +2,8 @@
 
 CryptoViewer with React, Redux Toolkit, Rapid API
 
+Vercel link: https://cryptoview-edu.vercel.app/
+
 ## Rapid API Source
 
 [Coinranking](https://rapidapi.com/Coinranking/api/coinranking1) - Data about all cryptocurrencies and exchanges.
