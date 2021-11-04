@@ -1,6 +1,6 @@
 # CryptoViewer
 
-CryptoViewer with React, Redux Toolkit, Rapid API
+CryptoViewer with React, Ant Design, Redux Toolkit, Rapid API
 
 Vercel link: https://cryptoview-edu.vercel.app/
 
