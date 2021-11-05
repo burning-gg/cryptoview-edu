@@ -7,6 +7,8 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 import { Cryptocurrencies, News } from '.';
 import Loader from './Loader';
 
+import { millifyBigInt } from '../utils/millifyBigInt';
+
 const { Title } = Typography;
 
 const Homepage = () => {
@@ -14,6 +16,11 @@ const Homepage = () => {
   const globalStats = data?.data?.stats;
 
   if (isFetching) return <Loader />;
+
+  const bigIntValue =
+    globalStats.total24hVolume > Number.MAX_SAFE_INTEGER
+      ? millifyBigInt(globalStats.total24hVolume)
+      : millify(globalStats.total24hVolume);
 
   return (
     <Fragment>
@@ -37,10 +44,7 @@ const Homepage = () => {
           />
         </Col>
         <Col span={12}>
-          <Statistic
-            title='Total 24h Volume'
-            value={millify(globalStats.total24hVolume)}
-          />
+          <Statistic title='Total 24h Volume' value={bigIntValue} />
         </Col>
         <Col span={12}>
           <Statistic
