@@ -17,11 +17,6 @@ const Homepage = () => {
 
   if (isFetching) return <Loader />;
 
-  const bigIntValue =
-    globalStats.total24hVolume > Number.MAX_SAFE_INTEGER
-      ? millifyBigInt(globalStats.total24hVolume)
-      : millify(globalStats.total24hVolume);
-
   return (
     <Fragment>
       <Title level={2} className='heading'>
@@ -44,7 +39,10 @@ const Homepage = () => {
           />
         </Col>
         <Col span={12}>
-          <Statistic title='Total 24h Volume' value={bigIntValue} />
+          <Statistic
+            title='Total 24h Volume'
+            value={millifyBigInt(globalStats.total24hVolume)}
+          />
         </Col>
         <Col span={12}>
           <Statistic
